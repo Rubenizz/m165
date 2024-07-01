@@ -7,3 +7,9 @@ db.Fan.deleteMany({
 db.trainer.deleteOne({
     "email": "marc.crawford@zsc.com"
 });
+db.Fan.deleteOne({
+    $or: [
+        { vorname: "Ruben" },
+        { nachname: "Predolac" }
+    ]
+});
